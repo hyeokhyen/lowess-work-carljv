@@ -153,7 +153,7 @@ def lowess(np.ndarray[DTYPE_t, ndim = 1] endog,
     y = endog[(np.isfinite(exog) & np.isfinite(endog))]
 
     # Sort both inputs according to the ascending order of x values
-    sort_index = np.argsort(exog)
+    sort_index = np.argsort(x)
     x = np.array(x[sort_index])
     y = np.array(y[sort_index])
     n = x.shape[0]
